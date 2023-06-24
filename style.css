@@ -414,6 +414,16 @@ nav.close ~ .dashboard .top {
 .sub-menu-link:hover p {
   font-weight: 900;
 }
+.input {
+  width: 100%;
+  margin: 20px 0px 20px 0px;
+  padding: 12px;
+  outline: none;
+  border: none;
+  background: #e6e5e5;
+  font-size: 20px;
+  border-radius: 3px;
+}
 @media (max-width: 1000px) {
   nav {
     width: 73px;
