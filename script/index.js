@@ -26,7 +26,39 @@ sidebarToggle.addEventListener("click", () => {
     localStorage.setItem("status", "open");
   }
 });
-let subMenu = document.getElementById("subMenu");
+const subMenu = document.getElementById("subMenu");
 function toggleMenu() {
   subMenu.classList.toggle("open-menu");
 }
+window.onclick = (event) => {
+  if (!event.target.matches(".btn")) {
+    if (subMenu.classList.contains("open-menu")) {
+      subMenu.classList.remove("open-menu");
+    }
+  }
+};
+subMenu.addEventListener("click", (e) => {
+  e.stopImmediatePropagation();
+});
+// Get the table element
+const table = document.querySelector("table");
+
+// Get all the table rows
+const rows = Array.from(table.querySelectorAll("tr"));
+
+// Add event listener to table headers for sorting
+table.querySelectorAll("th").forEach(function (header, index) {
+  header.addEventListener("click", function () {
+    // Sort the rows based on the clicked column index
+    rows.sort(function (a, b) {
+      const aValue = a.querySelectorAll("td")[index].textContent;
+      const bValue = b.querySelectorAll("td")[index].textContent;
+      return aValue.localeCompare(bValue);
+    });
+
+    // Re-append the sorted rows to the table body
+    rows.forEach(function (row) {
+      table.querySelector("tbody").appendChild(row);
+    });
+  });
+});

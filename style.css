@@ -341,14 +341,17 @@ nav.close ~ .dashboard .top {
 .sub-menu-wrap {
   position: absolute;
   top: 100%;
-  max-height: 0px;
+  display: none;
   transition: max-height 0.4s;
   overflow: hidden;
   width: 320px;
   right: 1%;
 }
+.show {
+  display: block;
+}
 .sub-menu-wrap.open-menu {
-  max-height: 400px;
+  display: block;
 }
 .sub-menu {
   background: #ccc;
