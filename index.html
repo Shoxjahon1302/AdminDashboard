@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo-name">
+        <div class="logo-image">
+          <img src="./images/logo.webp" alt="" />
+        </div>
+        <div class="logo_name">Coding-Lab</div>
+      </div>
+      <div class="menu-items">
+        <ul class="nav-links">
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-house"></i>
+              <span class="link-name">Dashboard</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-file"></i>
+              <span class="link-name">Content</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-chart-line"></i>
+              <span class="link-name">Analytics</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-regular fa-thumbs-up"></i>
+              <span class="link-name">Like</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-regular fa-comments"></i>
+              <span class="link-name">Comments</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-share-from-square"></i>
+              <span class="link-name">Share</span></a
+            >
+          </li>
+        </ul>
+        <ul class="logout-mode">
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <span class="link-name">Log Out</span></a
+            >
+          </li>
+          <li class="mode">
+            <a href="#">
+              <i class="fa-solid fa-moon"></i>
+              <span class="link-name">Dark Mode</span>
+            </a>
+            <div class="mode-toggle">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="dashboard">
+      <div class="top">
+        <i class="fa-solid fa-bars sidebar-toggle"></i>
+        <div class="search-box">
+          <input type="text" placeholder="Search here..." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <img src="./images/user2.jpg" alt="" />
+      </div>
+      <div class="dash-content">
+        <div class="overview">
+          <div class="title">
+            <i class="fa-solid fa-gauge-simple-high"></i>
+            <span class="text">Dashboard</span>
+          </div>
+          <div class="boxes">
+            <div class="box box1">
+              <i class="fa-regular fa-thumbs-up"></i>
+              <span class="text">Total Likes</span>
+              <span class="nubver">34,344</span>
+            </div>
+            <div class="box box2">
+              <i class="fa-regular fa-comments"></i>
+              <span class="text">Total Comments</span>
+              <span class="nubver">34,344</span>
+            </div>
+            <div class="box box3">
+              <i class="fa-solid fa-share-from-square"></i>
+              <span class="text">Total Share</span>
+              <span class="nubver">34,344</span>
+            </div>
+          </div>
+        </div>
+        <div class="activity">
+          <div class="title">
+            <i class="fa-solid fa-clock"></i>
+            <span class="text">Recent Activity</span>
+          </div>
+          <div class="activity-data">
+            <div class="data names">
+              <span class="data-title">Name</span>
+              <span class="data-list">Shoxjahon Niyatov</span>
+            </div>
+            <div class="data eamil">
+              <span class="data-title">Email</span>
+              <span class="data-list">shoxjahonniyatov@gmai.com</span>
+            </div>
+            <div class="data joined">
+              <span class="data-title">Joined</span>
+              <span class="data-list">2023-02-12</span>
+            </div>
+            <div class="data type">
+              <span class="data-title">Type</span>
+              <span class="data-list">New</span>
+            </div>
+            <div class="data status">
+              <span class="data-title">Status</span>
+              <span class="data-list">Liked</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./script/index.js"></script>
+  </body>
+</html>
