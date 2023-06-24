@@ -26,3 +26,7 @@ sidebarToggle.addEventListener("click", () => {
     localStorage.setItem("status", "open");
   }
 });
+let subMenu = document.getElementById("subMenu");
+function toggleMenu() {
+  subMenu.classList.toggle("open-menu");
+}
