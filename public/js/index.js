@@ -62,9 +62,52 @@ table.querySelectorAll("th").forEach(function (header, index) {
     });
   });
 });
-fetch("data.json")
+function filter_list(lst, condition) {
+  return lst.filter(condition);
+}
+
+fetch("./public/data/data.json")
   .then((response) => response.json())
-  .then((data) => console.log(data))
+  .then((data) => {
+    const filteredData = filter_list(data, (item) => {
+      return item.tabaqasi === "A";
+    });
+    const html = filteredData
+      .map(
+        (item) => `
+       <tr>
+        <th>${item.id}</th>
+        <th>${item.first_name}</th>
+        <th>${item.last_name}</th>
+        <th>${item.email}</th>
+        <th>${item.tabaqasi}</th>
+       </tr>`
+      )
+      .join("");
+    document.getElementById("myList").innerHTML = html;
+  })
   .catch((error) => {
-    console.log("Xato:", error);
+    console.log("Error:", error);
   });
+
+// fetch("./public/data/data.json")
+//   .then((response) => response.json())
+//   .then((data) => {
+
+//     const html = data
+//       .map(
+//         (item) => `
+//        <tr>
+//         <th>${item.id}</th>
+//         <th>${item.first_name}</th>
+//         <th>${item.last_name}</th>
+//         <th>${item.email}</th>
+//         <th>${item.tabaqasi}</th>
+//        </tr>`
+//       )
+//       .join("");
+//     document.getElementById("myList").innerHTML = html;
+//   })
+//   .catch((error) => {
+//     console.log("Error:", error);
+//   });
