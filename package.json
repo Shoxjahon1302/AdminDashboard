@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "bower": "^1.8.14",
+    "datatables.net": "^1.13.4",
+    "datatables.net-dt": "^1.13.4",
+    "install": "^0.13.0"
+  }
+}

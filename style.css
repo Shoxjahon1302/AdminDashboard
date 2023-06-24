@@ -15,7 +15,7 @@
   --toggle-color: #ddd;
   --box1-color: #4da3ff;
   --box2-color: #ffe6ac;
-  --box2-color: #e7d1fc;
+  --box3-color: #e7d1fc;
   --title-icon-color: #fff;
 
   /* ===== Transition ===== */
@@ -37,7 +37,7 @@ body.dark {
   --toggle-color: #fff;
   --box1-color: #3a3b3c;
   --box2-color: #3a3b3c;
-  --box2-color: #3a3b3c;
+  --box3-color: #3a3b3c;
   --title-icon-color: #ccc;
 }
 nav {
@@ -317,13 +317,9 @@ nav.close ~ .dashboard .top {
   background: var(--box3-color);
 }
 .dash-content .activity .activity-data {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-}
-.dash-content .activity .activity-data {
-  display: flex;
-  flex-direction: column;
 }
 .dash-content .activity .activity-data .data {
   display: flex;
