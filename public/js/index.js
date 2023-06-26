@@ -40,23 +40,15 @@ window.onclick = (event) => {
 subMenu.addEventListener("click", (e) => {
   e.stopImmediatePropagation();
 });
-// Get the table element
 const table = document.querySelector("table");
-
-// Get all the table rows
 const rows = Array.from(table.querySelectorAll("tr"));
-
-// Add event listener to table headers for sorting
 table.querySelectorAll("th").forEach(function (header, index) {
   header.addEventListener("click", function () {
-    // Sort the rows based on the clicked column index
     rows.sort(function (a, b) {
       const aValue = a.querySelectorAll("td")[index].textContent;
       const bValue = b.querySelectorAll("td")[index].textContent;
       return aValue.localeCompare(bValue);
     });
-
-    // Re-append the sorted rows to the table body
     rows.forEach(function (row) {
       table.querySelector("tbody").appendChild(row);
     });
@@ -89,25 +81,3 @@ fetch("./public/data/data.json")
   .catch((error) => {
     console.log("Error:", error);
   });
-
-// fetch("./public/data/data.json")
-//   .then((response) => response.json())
-//   .then((data) => {
-
-//     const html = data
-//       .map(
-//         (item) => `
-//        <tr>
-//         <th>${item.id}</th>
-//         <th>${item.first_name}</th>
-//         <th>${item.last_name}</th>
-//         <th>${item.email}</th>
-//         <th>${item.tabaqasi}</th>
-//        </tr>`
-//       )
-//       .join("");
-//     document.getElementById("myList").innerHTML = html;
-//   })
-//   .catch((error) => {
-//     console.log("Error:", error);
-//   });
